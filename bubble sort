@@ -1,20 +1,8 @@
 #include <stdio.h>
-
-// perform the bubble sort
 void bubbleSort(int array[], int size) {
-
-  // loop to access each array element
   for (int step = 0; step < size - 1; ++step) {
-      
-    // loop to compare array elements
     for (int i = 0; i < size - step - 1; ++i) {
-      
-      // compare two adjacent elements
-      // change > to < to sort in descending order
       if (array[i] > array[i + 1]) {
-        
-        // swapping occurs if elements
-        // are not in the intended order
         int temp = array[i];
         array[i] = array[i + 1];
         array[i + 1] = temp;
@@ -22,8 +10,6 @@ void bubbleSort(int array[], int size) {
     }
   }
 }
-
-// print array
 void printArray(int array[], int size) {
   for (int i = 0; i < size; ++i) {
     printf("%d  ", array[i]);
@@ -40,3 +26,16 @@ int main() {
   printf("Sorted Array in Ascending Order:\n");
   printArray(data, size);
 }
+
+algorithm
+begin BubbleSort(list)
+
+   for all elements of list
+      if list[i] > list[i+1]
+         swap(list[i], list[i+1])
+      end if
+   end for
+   
+   return list
+   
+end BubbleSort
